@@ -118,28 +118,34 @@
             opacity: 0.1;
         }
 
-        /* Clases utilitarias para animaciones al hacer scroll */
-        .reveal-right {
+        /* Clases utilitarias para animaciones al hacer scroll (Mobile First - De abajo hacia arriba) */
+        .reveal-right, .reveal-left, .reveal-bottom {
             opacity: 0;
-            transform: translateX(100px);
-            transition: all 0.8s ease-out;
-        }
-        
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-100px);
-            transition: all 0.8s ease-out;
+            transform: translateY(50px);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1);
         }
 
-        .reveal-bottom {
-            opacity: 0;
-            transform: translateY(100px);
-            transition: all 0.8s ease-out;
-        }
-        
         .reveal-active {
-            opacity: 1;
-            transform: translate(0, 0);
+            opacity: 1 !important;
+            transform: translate(0, 0) !important;
+        }
+
+        /* En Desktop (PC) respetamos la animación lateral original */
+        @media (min-width: 768px) {
+            .reveal-right {
+                transform: translateX(100px);
+                transition: all 0.8s ease-out;
+            }
+            
+            .reveal-left {
+                transform: translateX(-100px);
+                transition: all 0.8s ease-out;
+            }
+
+            .reveal-bottom {
+                transform: translateY(100px);
+                transition: all 0.8s ease-out;
+            }
         }
 
         /* Estilos personalizados para FullCalendar */
@@ -208,8 +214,8 @@
 
     <!-- VISTA PRINCIPAL -->
     <main id="main-view" class="flex flex-col overflow-hidden">
-        <!-- Hero Section - Animación de Izquierda a Derecha -->
-        <header id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 order-1 animate-slide-in-left">
+        <!-- Hero Section -->
+        <header id="inicio" class="relative min-h-screen flex items-center justify-center pt-20 order-1 scroll-reveal reveal-left">
             <div class="absolute inset-0 bg-slate-900">
                 <img src="https://lh3.googleusercontent.com/d/1e9DkISlz9mIpVl6P0s4TBHPttzgAasNU" alt="Scouts explorando la naturaleza en Puerto Rico" class="w-full h-full object-cover opacity-40" referrerpolicy="no-referrer">
             </div>
@@ -377,7 +383,7 @@
             </div>
         </section>
 
-        <!-- Galería (MOMENTOS 808) - Animación de Derecha a Izquierda -->
+        <!-- Galería (MOMENTOS 808) -->
         <section id="galeria" class="py-24 bg-indigo-950 text-white order-5 scroll-reveal reveal-right">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex justify-between items-center mb-12">
@@ -405,7 +411,7 @@
             </div>
         </section>
 
-        <!-- Formulario de Contacto - Animación de Izquierda a Derecha -->
+        <!-- Formulario de Contacto -->
         <section id="contacto" class="py-16 order-6 scroll-reveal reveal-left">
             <div class="max-w-3xl mx-auto px-6">
                 <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
@@ -460,14 +466,14 @@
             </div>
         </div>
 
-        <!-- 1. Hero Bienvenida (Pág 2) - Animación Derecha -->
-        <section class="relative min-h-[75vh] md:h-[70vh] flex items-center justify-center bg-indigo-950 py-16 md:py-0 overflow-hidden animate-slide-in-right">
+        <!-- 1. Hero Bienvenida (Pág 2) -->
+        <section class="relative min-h-[75vh] md:h-[70vh] flex items-center justify-center bg-indigo-950 py-16 md:py-0 overflow-hidden scroll-reveal reveal-right">
             <div class="absolute inset-0 bg-pattern opacity-10"></div>
             <div class="absolute -top-40 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
             <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-orange-600/10 rounded-full blur-3xl"></div>
             
             <div class="relative z-10 max-w-4xl mx-auto px-4 md:px-6 text-center text-white mt-10 md:mt-0">
-                <span class="text-orange-500 font-bold uppercase tracking-widest text-xs md:text-sm mb-3 md:mb-4 block animate-fade-in-up">El Comienzo</span>
+                <span class="text-orange-500 font-bold uppercase tracking-widest text-xs md:text-sm mb-3 md:mb-4 block scroll-reveal reveal-bottom">El Comienzo</span>
                 <h2 class="text-4xl sm:text-5xl md:text-7xl font-brand mb-4 md:mb-6 leading-none flex items-center justify-center flex-wrap">
                     <img src="https://lh3.googleusercontent.com/d/1gIjwEdzzXzPWpsIFC6P7LMff1q9uiVcR" class="h-[1em] w-auto mr-2 md:mr-4 inline-block align-middle drop-shadow-xl" alt="Emblema Scout" referrerpolicy="no-referrer">
                     CARTA DE BIENVENIDA
@@ -475,14 +481,14 @@
                 <p class="text-base sm:text-lg md:text-xl font-light text-indigo-100 mb-6 leading-relaxed italic px-2">"El movimiento es un gran juego, pero un juego con un propósito." <br><span class="text-xs md:text-sm font-bold opacity-80 not-italic mt-2 block">- Baden Powell</span></p>
                 <div class="w-16 md:w-24 h-1 bg-orange-500 mx-auto mb-6 md:mb-8"></div>
                 <p class="text-sm md:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed mb-8 px-2">Bienvenido al movimiento juvenil más grande del mundo presente en más de 216 países. A partir de este momento comienzas una gran aventura junto con tus compañeros de patrulla. Esperamos que tu paso por la Tropa sea una aventura inolvidable en tu vida.</p>
-                <div class="text-orange-500 animate-fade-in-up" style="animation-delay: 0.5s;">
+                <div class="text-orange-500 scroll-reveal reveal-bottom" style="transition-delay: 0.3s;">
                     <p class="text-xl sm:text-2xl md:text-3xl font-brand tracking-wide">Alberto "Quique" Santiago</p>
                     <p class="text-[10px] md:text-sm font-bold uppercase tracking-widest text-orange-600 mt-1">Scoutmaster</p>
                 </div>
             </div>
         </section>
 
-        <!-- 2. Misión y Valores (Pág 3 y 5) - Animación de Tarjetas -->
+        <!-- 2. Misión y Valores (Pág 3 y 5) -->
         <section class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
             <div class="absolute -top-40 -right-40 w-72 md:w-96 h-72 md:h-96 bg-orange-100 rounded-full blur-3xl opacity-50"></div>
             <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
@@ -531,7 +537,7 @@
             </div>
         </section>
 
-        <!-- 3. Historia y Orígenes (Pág 5) - Animación Izquierda a Derecha -->
+        <!-- 3. Historia y Orígenes (Pág 5) -->
         <section class="py-16 md:py-24 bg-white relative overflow-hidden scroll-reveal reveal-left">
             <div class="absolute left-0 top-0 w-1/2 h-full bg-indigo-50/30 rounded-r-[200px] -z-10 hidden lg:block"></div>
             <div class="max-w-5xl mx-auto px-4 md:px-6 relative z-10">
@@ -563,7 +569,7 @@
             </div>
         </section>
 
-        <!-- 4. Identidad Visual (Pág 8, 9, 10) - Animación de Tarjetas -->
+        <!-- 4. Identidad Visual (Pág 8, 9, 10) -->
         <section class="py-16 md:py-24 bg-indigo-950 text-white relative">
             <div class="absolute inset-0 bg-pattern opacity-10"></div>
             <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
@@ -620,7 +626,7 @@
             </div>
         </section>
 
-        <!-- 5. Actividades / Drone Video (Pág 11) - Animación Derecha -->
+        <!-- 5. Actividades / Drone Video (Pág 11) -->
         <section class="py-16 md:py-32 relative bg-scroll md:bg-fixed bg-center bg-cover border-b-8 border-orange-600 scroll-reveal reveal-right" style="background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1920&q=80');">
             <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
             <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
@@ -664,7 +670,7 @@
     <!-- VISTA DOCUMENTOS (RECURSOS) -->
     <section id="docs-view" class="hidden pt-32 pb-24 bg-slate-50 min-h-screen">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-16 animate-slide-in-right">
+            <div class="text-center mb-16 scroll-reveal reveal-right">
                 <h2 class="text-4xl md:text-6xl font-brand text-indigo-950 uppercase leading-none flex items-center justify-center flex-wrap">
                     <img src="https://lh3.googleusercontent.com/d/1gIjwEdzzXzPWpsIFC6P7LMff1q9uiVcR" class="h-[1em] w-auto mr-3 inline-block align-middle" alt="Emblema Scout" referrerpolicy="no-referrer">
                     BIBLIOTECA SCOUT
@@ -672,7 +678,7 @@
                 <p class="text-slate-400 text-xs font-bold uppercase tracking-widest mt-4">Documentos y formularios oficiales 808</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 animate-slide-in-left" style="animation-delay: 0.2s;">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 scroll-reveal reveal-left" style="transition-delay: 0.2s;">
                 <a href="https://filestore.scouting.org/filestore/HealthSafety/pdf/680-001_ABC.pdf" target="_blank" class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 flex items-center group hover:border-orange-500 transition">
                     <div class="w-16 h-16 bg-slate-50 text-indigo-600 rounded-xl flex items-center justify-center text-2xl mr-6 group-hover:bg-indigo-600 group-hover:text-white transition"><i class="fas fa-file-medical"></i></div>
                     <div class="flex-grow">
@@ -737,7 +743,7 @@
                 </a>
             </div>
 
-            <div class="mt-16 text-center animate-slide-in-right" style="animation-delay: 0.4s;">
+            <div class="mt-16 text-center scroll-reveal reveal-right" style="transition-delay: 0.4s;">
                 <button onclick="switchView('main')" class="bg-indigo-950 text-white px-12 py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-orange-600 transition shadow-xl">Volver al inicio</button>
             </div>
         </div>
@@ -752,7 +758,7 @@
             </button>
 
             <!-- Encabezado -->
-            <div class="text-center mb-16 animate-slide-in-right">
+            <div class="text-center mb-16 scroll-reveal reveal-right">
                 <img src="https://lh3.googleusercontent.com/d/1gIjwEdzzXzPWpsIFC6P7LMff1q9uiVcR" alt="Emblema Scout" class="mx-auto h-20 md:h-24 w-auto mb-6 object-contain drop-shadow-lg" referrerpolicy="no-referrer">
                 <h2 class="text-3xl md:text-5xl font-brand text-indigo-950 uppercase leading-none flex items-center justify-center gap-3">
                     <i class="fas fa-award text-yellow-500"></i>
@@ -770,7 +776,7 @@
             </div>
 
             <!-- Línea de tiempo -->
-            <div class="relative border-l-4 border-indigo-200 ml-4 md:ml-8 space-y-8 pb-8 animate-slide-in-left" style="animation-delay: 0.2s;">
+            <div class="relative border-l-4 border-indigo-200 ml-4 md:ml-8 space-y-8 pb-8 scroll-reveal reveal-left" style="transition-delay: 0.2s;">
                 
                 <!-- Paso 1 a 12 (Simplificado visualmente en HTML) -->
                 <div class="relative pl-8 md:pl-12 group">
@@ -907,14 +913,14 @@
             </div>
 
             <!-- Nota al pie -->
-            <div class="mt-8 bg-white border-l-4 border-yellow-500 p-6 rounded-r-xl shadow-md flex items-start gap-4 animate-slide-in-right" style="animation-delay: 0.4s;">
+            <div class="mt-8 bg-white border-l-4 border-yellow-500 p-6 rounded-r-xl shadow-md flex items-start gap-4 scroll-reveal reveal-right" style="transition-delay: 0.4s;">
                 <i class="fas fa-info-circle text-indigo-600 text-2xl mt-0.5"></i>
                 <p class="text-indigo-950 font-medium text-sm md:text-base">
                     <strong>Nota Importante:</strong> El Scoutmaster puede delegar su función en otro líder adulto.
                 </p>
             </div>
 
-            <div class="mt-12 animate-slide-in-left" style="animation-delay: 0.6s;">
+            <div class="mt-12 scroll-reveal reveal-left" style="transition-delay: 0.6s;">
                 <button onclick="switchView('docs')" class="bg-indigo-950 text-white px-8 py-3 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-orange-600 transition shadow-xl">
                     Regresar
                 </button>
@@ -934,8 +940,8 @@
             </div>
         </div>
 
-        <!-- Hero del Plan - Animación Derecha -->
-        <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 flex items-center justify-center bg-center bg-cover border-b-8 border-orange-600 animate-slide-in-right" style="background-image: url('https://lh3.googleusercontent.com/d/1jSEM9VcuZSXgt2K1mqwQddY5LQdj3Iwt');">
+        <!-- Hero del Plan -->
+        <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 flex items-center justify-center bg-center bg-cover border-b-8 border-orange-600 scroll-reveal reveal-right" style="background-image: url('https://lh3.googleusercontent.com/d/1jSEM9VcuZSXgt2K1mqwQddY5LQdj3Iwt');">
             <div class="absolute inset-0 bg-indigo-950/80 backdrop-blur-sm"></div>
             <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
                 <span class="bg-orange-600 text-white font-bold uppercase tracking-widest text-[10px] px-4 py-1.5 rounded-full mb-6 inline-block shadow-lg">Tropa y Manada 808</span>
@@ -947,8 +953,8 @@
             </div>
         </section>
 
-        <!-- Contenido Resumido - Animación Izquierda -->
-        <section class="max-w-6xl mx-auto px-6 py-16 -mt-10 relative z-20 animate-slide-in-left" style="animation-delay: 0.2s;">
+        <!-- Contenido Resumido -->
+        <section class="max-w-6xl mx-auto px-6 py-16 -mt-10 relative z-20 scroll-reveal reveal-left" style="transition-delay: 0.2s;">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
                 
                 <!-- Columna 1: Logística y Detalles -->
@@ -1082,15 +1088,17 @@
                 <img src="https://lh3.googleusercontent.com/d/1JxxI4W3lAWXwNc9A31-PvO2F7P2OX9WM" class="h-28 mx-auto mb-6 brightness-0 invert opacity-90 hover:opacity-100 transition" referrerpolicy="no-referrer">
                 <p class="text-[10px] font-bold text-white/60 uppercase tracking-widest leading-relaxed mb-4">© 2026 Tropa 808 de Puerto Rico • Siempre Listos ⚜️</p>
                 
-                <div class="flex flex-wrap justify-center gap-3">
-                    <a href="https://www.scoutingpr.org/" target="_blank" class="inline-flex items-center px-5 py-2 border border-white/20 rounded-full text-[10px] font-bold text-white hover:bg-white hover:text-indigo-900 transition uppercase tracking-widest shadow-sm">
-                        Concilio PR <i class="fas fa-external-link-alt ml-2"></i>
+                <div class="flex flex-wrap justify-center items-center gap-4 md:gap-5 mt-2">
+                    <a href="https://www.scoutingpr.org/" target="_blank" class="flex items-center text-[10px] md:text-xs font-bold text-white/70 hover:text-white transition-colors duration-300 uppercase tracking-widest group">
+                        Concilio PR <i class="fas fa-arrow-right ml-2 text-[10px] opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:text-orange-400 transition-all"></i>
                     </a>
-                    <a href="https://my.scouting.org/" target="_blank" class="inline-flex items-center px-5 py-2 border border-white/20 rounded-full text-[10px] font-bold text-white hover:bg-white hover:text-indigo-900 transition uppercase tracking-widest shadow-sm">
-                        My.Scouting <i class="fas fa-external-link-alt ml-2"></i>
+                    <span class="hidden md:block text-white/20 text-xs font-light">|</span>
+                    <a href="https://my.scouting.org/" target="_blank" class="flex items-center text-[10px] md:text-xs font-bold text-white/70 hover:text-white transition-colors duration-300 uppercase tracking-widest group">
+                        My.Scouting <i class="fas fa-arrow-right ml-2 text-[10px] opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:text-orange-400 transition-all"></i>
                     </a>
-                    <a href="https://advancements.scouting.org/login?redirectTo=https%3A%2F%2Fadvancements.scouting.org%2F" target="_blank" class="inline-flex items-center px-5 py-2 border border-white/20 rounded-full text-[10px] font-bold text-white hover:bg-white hover:text-indigo-900 transition uppercase tracking-widest shadow-sm">
-                        Scoutbook <i class="fas fa-external-link-alt ml-2"></i>
+                    <span class="hidden md:block text-white/20 text-xs font-light">|</span>
+                    <a href="https://advancements.scouting.org/login?redirectTo=https%3A%2F%2Fadvancements.scouting.org%2F" target="_blank" class="flex items-center text-[10px] md:text-xs font-bold text-white/70 hover:text-white transition-colors duration-300 uppercase tracking-widest group">
+                        Scoutbook <i class="fas fa-arrow-right ml-2 text-[10px] opacity-40 group-hover:opacity-100 group-hover:translate-x-1 group-hover:text-orange-400 transition-all"></i>
                     </a>
                 </div>
             </div>
@@ -1300,8 +1308,8 @@
         let calendarInstance = null;
 
         async function fetchEvents() {
-            const cachedData = localStorage.getItem('tropa808_v10_events');
-            const cacheTime = localStorage.getItem('tropa808_v10_events_time');
+            const cachedData = localStorage.getItem('tropa808_v11_events');
+            const cacheTime = localStorage.getItem('tropa808_v11_events_time');
             const now = new Date().getTime();
             const todayComp = new Date().setHours(0,0,0,0); 
             
@@ -1417,7 +1425,7 @@
                                 end: endStr,
                                 allDay: !dateStr.includes('T'),
                                 y: eventDate.getFullYear(), m: eventDate.getMonth(), d: eventDate.getDate(), 
-                                comp: eventDate.getTime(),
+                                comp: eventDate.getTime() + Math.random(),
                                 backgroundColor: calBgColor,
                                 borderColor: 'transparent',
                                 extendedProps: {
@@ -1434,8 +1442,8 @@
                 globalRawEvents = results.flat().sort((a,b) => a.comp - b.comp);
 
                 if (globalRawEvents.length > 0) {
-                    localStorage.setItem('tropa808_v10_events', JSON.stringify(globalRawEvents));
-                    localStorage.setItem('tropa808_v10_events_time', now.toString());
+                    localStorage.setItem('tropa808_v11_events', JSON.stringify(globalRawEvents));
+                    localStorage.setItem('tropa808_v11_events_time', now.toString());
                     processAndRender(todayComp);
                 } else if (!cachedData) {
                     const container1 = document.getElementById('event-cards-container');
@@ -1456,7 +1464,7 @@
                     group = { key: dateKey, y: ev.y, m: ev.m, d: ev.d, comp: ev.comp, summaries: [] };
                     groupedEvents.push(group);
                 }
-                group.summaries.push({ text: ev.title, source: ev.source });
+                group.summaries.push({ text: ev.title, source: ev.source, comp: ev.comp });
             });
             renderEventHTML(groupedEvents.slice(0, 3), 'event-cards-container'); 
 
@@ -1666,8 +1674,8 @@
 
                 const textSize = ev.summaries.length > 1 ? 'text-lg md:text-xl' : 'text-2xl';
                 const titlesHtml = ev.summaries.map(s => {
-                    return `<div class="flex items-start mb-2"><h4 class="${textSize} font-brand text-indigo-950 leading-tight">${s.text}</h4></div>`;
-                }).join('<div class="w-12 h-px bg-slate-200 my-3"></div>');
+                    return `<div class="flex items-start mb-2 cursor-pointer group" onclick="openCardModal(${s.comp})"><h4 class="${textSize} font-brand text-indigo-950 leading-tight group-hover:text-orange-600 transition">${s.text}</h4></div>`;
+                }).join('<div class="w-full h-[2px] bg-gradient-to-r from-transparent via-slate-300 to-transparent my-4"></div>');
                 
                 let revealDir = "reveal-bottom";
                 if(i % 3 === 0) revealDir = "reveal-left";
@@ -1675,7 +1683,7 @@
                 else if(i % 3 === 2) revealDir = "reveal-right";
 
                 return `
-                <div class="event-card-new scroll-reveal ${revealDir} bg-white rounded-3xl p-8 border-b-8 ${st.b} shadow-xl flex flex-col justify-between h-full" onclick="openCardModal(${ev.comp})">
+                <div class="event-card-new scroll-reveal ${revealDir} bg-white rounded-3xl p-8 border-b-8 ${st.b} shadow-xl flex flex-col justify-between h-full">
                     <div>
                         <div class="flex items-center justify-between mb-8">
                             <div class="flex items-center">
@@ -1778,7 +1786,22 @@
                 if (googleCal && !googleCal.classList.contains('hidden')) {
                     if(toggleText) toggleText.innerText = "Ver próximos eventos";
                     if (calendarInstance) {
-                        setTimeout(() => { calendarInstance.render(); }, 10);
+                        setTimeout(() => { 
+                            calendarInstance.render(); 
+                            
+                            // Auto-scroll y animación en TODAS las pantallas (Mobile y Desktop)
+                            googleCal.classList.add('reveal-active');
+                            
+                            // Ajustamos el margen dependiendo de si es celular o PC
+                            const headerOffset = window.innerWidth < 768 ? 85 : 100; 
+                            const elementPosition = googleCal.getBoundingClientRect().top;
+                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                            
+                            window.scrollTo({
+                                top: offsetPosition,
+                                behavior: "smooth"
+                            });
+                        }, 50);
                     }
                 } else {
                     if(toggleText) toggleText.innerText = "Ver calendario completo";
