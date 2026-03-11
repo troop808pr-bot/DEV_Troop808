@@ -1073,13 +1073,21 @@
             <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
             
             <!-- Iconos de Compartir (Flotantes en Hero) -->
-            <div class="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-30 flex gap-3">
-                <span id="copy-msg-first-aid" class="absolute bottom-14 right-0 text-[10px] text-white font-bold uppercase tracking-widest opacity-0 transition-opacity duration-300 whitespace-nowrap bg-green-500 px-3 py-1.5 rounded-lg shadow-lg pointer-events-none">¡Copiado!</span>
-                <button onclick="copyShareUrl('first-aid')" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/20 backdrop-blur-md border border-white/30 text-white hover:bg-white hover:text-red-600 flex items-center justify-center transition duration-300 shadow-xl group" title="Copiar Enlace">
-                    <i class="fas fa-share-nodes text-sm md:text-base group-hover:scale-110 transition"></i>
-                </button>
-                <button onclick="shareWhatsApp('first-aid', 'Descubre cómo se prepara un scout para emergencias reales. First Aid Merit Badge - Tropa 808:')" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#25D366] text-white hover:bg-[#128C7E] flex items-center justify-center transition duration-300 shadow-xl group" title="Compartir en WhatsApp">
-                    <i class="fab fa-whatsapp text-lg md:text-xl group-hover:scale-110 transition"></i>
+            <div class="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-30 flex flex-col items-end">
+                <!-- Menú de opciones (Oculto por defecto) -->
+                <div id="share-menu-first-aid" class="flex gap-3 mb-3 opacity-0 pointer-events-none transition-all duration-300 translate-y-2 origin-bottom relative">
+                    <span id="copy-msg-first-aid" class="absolute -top-10 right-0 text-[10px] text-white font-bold uppercase tracking-widest opacity-0 transition-opacity duration-300 whitespace-nowrap bg-green-500 px-3 py-1.5 rounded-lg shadow-lg pointer-events-none">¡Copiado!</span>
+                    <button onclick="copyShareUrl('first-aid'); toggleShareMenu('first-aid')" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-slate-800/80 backdrop-blur-md border border-slate-400 text-white hover:bg-slate-700 flex items-center justify-center transition duration-300 shadow-xl group" title="Copiar Enlace">
+                        <i class="fas fa-link text-sm md:text-base group-hover:scale-110 transition"></i>
+                    </button>
+                    <button onclick="shareWhatsApp('first-aid', 'Descubre cómo se prepara un scout para emergencias reales. First Aid Merit Badge - Tropa 808:'); toggleShareMenu('first-aid')" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#25D366] text-white hover:bg-[#128C7E] border border-transparent flex items-center justify-center transition duration-300 shadow-xl group" title="Compartir en WhatsApp">
+                        <i class="fab fa-whatsapp text-lg md:text-xl group-hover:scale-110 transition"></i>
+                    </button>
+                </div>
+                
+                <!-- Botón COMPARTIR principal -->
+                <button onclick="toggleShareMenu('first-aid')" class="bg-black/60 backdrop-blur-md border border-white/30 text-white px-4 py-2 md:px-5 md:py-2.5 rounded-lg hover:bg-black/80 hover:border-white/60 flex items-center justify-center transition duration-300 shadow-xl group text-xs md:text-sm font-bold uppercase tracking-widest">
+                    <i class="fas fa-share-nodes mr-2"></i> COMPARTIR
                 </button>
             </div>
 
@@ -2098,6 +2106,26 @@
         };
 
         // --- COMPARTIR ARTÍCULOS ---
+        window.toggleShareMenu = (viewId) => {
+            const menu = document.getElementById('share-menu-' + viewId);
+            if (menu) {
+                menu.classList.toggle('opacity-0');
+                menu.classList.toggle('pointer-events-none');
+                menu.classList.toggle('translate-y-2');
+            }
+        };
+
+        // Cerrar menú de compartir al hacer click afuera
+        document.addEventListener('click', (e) => {
+            const menus = document.querySelectorAll('[id^="share-menu-"]');
+            menus.forEach(menu => {
+                const btn = menu.nextElementSibling;
+                if (!menu.contains(e.target) && btn && !btn.contains(e.target)) {
+                    menu.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+                }
+            });
+        });
+
         window.getShareUrl = (viewId) => {
             return window.location.origin + window.location.pathname + '#' + viewId;
         };
