@@ -1116,7 +1116,7 @@
                                 <!-- Reemplazo de icono por la imagen de la insignia -->
                                 <img src="https://lh3.googleusercontent.com/d/1UyOWhEGw_xyHGJYGZezITEyofjVbjslm" alt="Insignia First Aid" class="w-20 md:w-24 h-auto object-contain drop-shadow-md mb-4 hover:-translate-y-1 transition duration-300" referrerpolicy="no-referrer">
                             </div>
-                            <h3 class="font-brand text-2xl md:text-4xl text-indigo-950 leading-tight">El Primer Respondedor Scout</h3>
+                            <h3 class="font-brand text-2xl md:text-4xl text-indigo-950 leading-tight">Insignia de Primeros Auxilios</h3>
                             <p class="text-slate-600 leading-relaxed text-sm md:text-base">
                                 La insignia de mérito de <strong>First Aid (Primeros Auxilios)</strong> es un requisito fundamental y obligatorio para obtener el rango de Eagle Scout.
                             </p>
@@ -1768,10 +1768,18 @@
                     
                     const agendaBtn = document.getElementById('modal-agenda-btn');
                     const eventDateObj = new Date(ev.start);
-                    const isAgendaDate = (eventDateObj.getFullYear() === 2026 && eventDateObj.getMonth() === 2 && eventDateObj.getDate() === 7);
                     
-                    if (isAgendaDate) {
-                        agendaBtn.href = "https://drive.google.com/file/d/1YvLFaNFcteDktGKDb_61L_Nh2UsyL6fZ/view?usp=sharing";
+                    let agendaUrl = null;
+                    if (eventDateObj.getFullYear() === 2026 && eventDateObj.getMonth() === 2) {
+                        if (eventDateObj.getDate() === 7) {
+                            agendaUrl = "https://drive.google.com/file/d/1YvLFaNFcteDktGKDb_61L_Nh2UsyL6fZ/view?usp=sharing";
+                        } else if (eventDateObj.getDate() === 14) {
+                            agendaUrl = "https://drive.google.com/file/d/1fYd5vydAhBClaUFr196h93cLb7mrqmZ_/view?usp=sharing";
+                        }
+                    }
+                    
+                    if (agendaUrl) {
+                        agendaBtn.href = agendaUrl;
                         agendaBtn.classList.remove('hidden');
                         agendaBtn.classList.add('flex');
                     } else {
@@ -1846,10 +1854,18 @@
             }
             
             const agendaBtn = document.getElementById('modal-agenda-btn');
-            const isAgendaDate = (d.getFullYear() === 2026 && d.getMonth() === 2 && d.getDate() === 7);
             
-            if (isAgendaDate) {
-                agendaBtn.href = "https://drive.google.com/file/d/1YvLFaNFcteDktGKDb_61L_Nh2UsyL6fZ/view?usp=sharing";
+            let agendaUrl = null;
+            if (d.getFullYear() === 2026 && d.getMonth() === 2) {
+                if (d.getDate() === 7) {
+                    agendaUrl = "https://drive.google.com/file/d/1YvLFaNFcteDktGKDb_61L_Nh2UsyL6fZ/view?usp=sharing";
+                } else if (d.getDate() === 14) {
+                    agendaUrl = "https://drive.google.com/file/d/1fYd5vydAhBClaUFr196h93cLb7mrqmZ_/view?usp=sharing";
+                }
+            }
+            
+            if (agendaUrl) {
+                agendaBtn.href = agendaUrl;
                 agendaBtn.classList.remove('hidden');
                 agendaBtn.classList.add('flex');
             } else {
