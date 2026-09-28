@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tropa 808 - La Infinita | Bayamón, Puerto Rico</title>
     
-    <!-- FAVICON (El logo que aparece en Google y pestañas) -->
+    <!-- FAVICON -->
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1mdpTyX-qRWk6B-rmHygfS9H6X6Lv5O4H">
     <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1mdpTyX-qRWk6B-rmHygfS9H6X6Lv5O4H">
     
     <meta name="description" content="Portal oficial de la Tropa Scout 808. Distrito Majagua, Bayamón PR. Únete a la aventura, desarrolla liderazgo y sirve a tu comunidad.">
     <meta name="keywords" content="Tropa 808, Scouts Puerto Rico, BSA, Distrito Majagua, Escultismo, Bayamón, Jóvenes, Aventura, Campamento, Naturaleza">
     
-    <!-- Etiquetas Open Graph para Redes Sociales y SEO -->
+    <!-- Etiquetas Open Graph -->
     <meta property="og:title" content="Tropa 808 - La Infinita | Bayamón, PR">
     <meta property="og:description" content="Portal oficial de la Tropa Scout 808. Formamos líderes a través de la naturaleza.">
     <meta property="og:image" content="https://lh3.googleusercontent.com/d/1mdpTyX-qRWk6B-rmHygfS9H6X6Lv5O4H">
@@ -118,7 +118,6 @@
             opacity: 0.1;
         }
 
-        /* Clases utilitarias para animaciones al hacer scroll (Mobile First - De abajo hacia arriba) */
         .reveal-right, .reveal-left, .reveal-bottom {
             opacity: 0;
             transform: translateY(50px);
@@ -130,7 +129,6 @@
             transform: translate(0, 0) !important;
         }
 
-        /* En Desktop (PC) respetamos la animación lateral original */
         @media (min-width: 768px) {
             .reveal-right {
                 transform: translateX(100px);
@@ -148,7 +146,6 @@
             }
         }
 
-        /* Estilos personalizados para FullCalendar */
         .fc { font-family: 'Outfit', sans-serif; }
         .fc-theme-standard .fc-scrollgrid { border-radius: 1rem; overflow: hidden; border-color: #e2e8f0; }
         .fc-theme-standard th { padding: 0.75rem 0; text-transform: uppercase; font-size: 0.75rem; color: #64748b; background: #f8fafc; border-bottom: 2px solid #e2e8f0; }
@@ -252,7 +249,7 @@
                     </button>
                 </div>
 
-                <!-- Tarjetas Escaladas (Izquierda, Abajo, Derecha) -->
+                <!-- Tarjetas Escaladas -->
                 <div id="event-cards-container" class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                     <div class="h-64 bg-slate-200 rounded-3xl animate-pulse scroll-reveal reveal-left"></div>
                     <div class="h-64 bg-slate-200 rounded-3xl animate-pulse scroll-reveal reveal-bottom"></div>
@@ -282,15 +279,12 @@
                             <span class="hidden md:inline">Añade el calendario a tu computadora o dispositivo para recibir actualizaciones en vivo.</span>
                         </p>
                         
-                        <!-- Mensaje de advertencia cuando "Todos" está seleccionado -->
                         <div id="sync-warning-todos" class="bg-red-50 border border-red-200 text-red-700 p-4 rounded-xl text-[10px] md:text-xs font-bold uppercase tracking-widest leading-relaxed mb-4 shadow-sm transition-all mx-auto max-w-md">
                             <i class="fas fa-exclamation-triangle text-lg mb-1"></i><br>
                             Selecciona Tropa 808, O.A. o Distrito en el filtro de arriba para descargar el calendario.
                         </div>
 
-                        <!-- Botones ocultos por defecto -->
                         <div id="sync-buttons-container" class="flex flex-col sm:flex-row gap-4 justify-center hidden transition-all">
-                            <!-- Botón Google / Android -->
                             <div class="w-full sm:w-1/2">
                                 <a id="sync-btn-google" href="https://calendar.google.com/calendar/r?cid=troop808pr%40gmail.com" target="_blank" class="flex items-center justify-center w-full bg-blue-600 text-white px-6 py-3.5 rounded-xl font-bold uppercase text-[10px] tracking-widest shadow-md hover:bg-blue-700 transition">
                                     <i class="fab fa-google mr-3 text-base"></i> Android (Google)
@@ -300,7 +294,6 @@
                                 </p>
                             </div>
                             
-                            <!-- Botón Apple / iPhone -->
                             <div class="w-full sm:w-1/2">
                                 <a id="sync-btn-apple" href="webcal://calendar.google.com/calendar/ical/troop808pr%40gmail.com/public/basic.ics" class="flex items-center justify-center w-full bg-slate-900 text-white px-6 py-3.5 rounded-xl font-bold uppercase text-[10px] tracking-widest shadow-md hover:bg-black transition">
                                     <i class="fab fa-apple mr-3 text-base"></i> iPhone (Apple)
@@ -313,7 +306,7 @@
             </div>
         </section>
 
-        <!-- Bitácora (RELATOS DE EXPEDICIÓN) -->
+        <!-- Bitácora -->
         <section id="blog" class="py-24 bg-white order-4 lg:order-3">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16 scroll-reveal reveal-bottom">
@@ -325,32 +318,18 @@
                 </div>
 
                 <div id="relatos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-                    <!-- ARTÍCULO 1 - NUEVO: First Aid -->
                     <article class="group scroll-reveal reveal-left">
-                        <div class="overflow-hidden rounded-2xl mb-6 relative">
-                            <img src="https://lh3.googleusercontent.com/d/1VdeeccFsc38ioGLkm03yaDt_ciqpc99H" alt="First Aid Merit Badge" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700" referrerpolicy="no-referrer">
-                            <div class="absolute top-4 left-4 bg-red-600 text-white text-[10px] font-bold px-3 py-1 rounded-full">MERIT BADGE</div>
-                        </div>
-                        <h4 class="text-xl font-bold text-indigo-950 mb-2 uppercase tracking-tight">First Aid</h4>
-                        <div class="flex items-center text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-3"><i class="far fa-clock mr-1.5"></i> Nuevo</div>
-                        <p class="text-slate-500 text-sm mb-4 leading-relaxed">Descubre cómo se prepara un scouts para emergencias reales: desde RCP y vendajes hasta manejo de quemaduras y fracturas. Guías paso a paso, tips prácticos para campamentos y recursos para aprobar el badge. ¡Salva vidas y gana tu insignia hoy!</p>
-                        <a href="javascript:void(0)" onclick="switchView('first-aid')" class="text-orange-600 font-bold text-xs uppercase tracking-widest flex items-center">Leer más <i class="fas fa-arrow-right ml-2"></i></a>
-                    </article>
-
-                    <!-- ARTÍCULO 2 - Historia -->
-                    <article class="group scroll-reveal reveal-bottom">
                         <div class="overflow-hidden rounded-2xl mb-6 relative">
                             <img src="https://lh3.googleusercontent.com/d/1Z-B_ZrqbUD162ijZkV6RUT_DxcyXjQ3J" alt="El Baúl de los Recuerdos Tropa 808" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700" referrerpolicy="no-referrer">
                             <div class="absolute top-4 left-4 bg-purple-600 text-white text-[10px] font-bold px-3 py-1 rounded-full">HISTORIA</div>
                         </div>
                         <h4 class="text-xl font-bold text-indigo-950 mb-2 uppercase tracking-tight">El Baúl de los Recuerdos</h4>
-                        <div class="flex items-center text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-3"><i class="far fa-clock mr-1.5"></i> Rescatado</div>
-                        <p class="text-slate-500 text-sm mb-4 leading-relaxed">Las primeras huellas de nuestra ruta. Rescatamos el blog que inauguró nuestra presencia en la red hace más de 10 años. Un recorrido por las primeras fogatas, campamentos y promesas que marcaron el camino de la 808.</p>
+                        <div class="flex items-center text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-3"><i class="far fa-clock mr-1.5"></i> Hoy</div>
+                        <p class="text-slate-500 text-sm mb-4 leading-relaxed">Las primeras huellas de nuestra ruta. Rescatamos el blog que inauguró nuestra presencia en la red hace más de 10 años.</p>
                         <a href="https://tropa808.blogspot.com/2011/" target="_blank" class="text-orange-600 font-bold text-xs uppercase tracking-widest flex items-center">Visitar Blog <i class="fas fa-arrow-right ml-2"></i></a>
                     </article>
 
-                    <!-- ARTÍCULO 3 - Caminata Flechas de Luz -->
-                    <article class="group scroll-reveal reveal-right">
+                    <article class="group scroll-reveal reveal-bottom">
                         <div class="overflow-hidden rounded-2xl mb-6 relative">
                             <img src="https://lh3.googleusercontent.com/d/1jSEM9VcuZSXgt2K1mqwQddY5LQdj3Iwt" alt="Tropa 808 en Caminata con Flecha de Luz" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700" referrerpolicy="no-referrer">
                             <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full">CAMINATA</div>
@@ -358,11 +337,10 @@
                         <h4 class="text-xl font-bold text-indigo-950 mb-2 uppercase tracking-tight">Caminata con Flecha de Luz</h4>
                         <div class="flex items-center text-[10px] text-slate-400 font-bold uppercase tracking-widest mb-3"><i class="far fa-clock mr-1.5"></i> 26 de Febrero</div>
                         <p class="text-slate-500 text-sm mb-4 leading-relaxed">Conoce el plan detallado de nuestra próxima aventura en ruta.</p>
-                        <a href="javascript:void(0)" onclick="switchView('caminata-plan')" class="text-orange-600 font-bold text-xs uppercase tracking-widest flex items-center">Ver Plan <i class="fas fa-arrow-right ml-2"></i></a>
+                        <a href="https://drive.google.com/file/d/1Ix2lsRlmy3ohhLS88AR2HVM6O0HXfMpN/view?usp=sharing" target="_blank" class="text-orange-600 font-bold text-xs uppercase tracking-widest flex items-center">Ver Plan <i class="fas fa-arrow-right ml-2"></i></a>
                     </article>
 
-                    <!-- ARTÍCULO 4 (Extra) - Toro Negro -->
-                    <article class="group scroll-reveal reveal-left">
+                    <article class="group scroll-reveal reveal-right">
                         <div class="overflow-hidden rounded-2xl mb-6 relative">
                             <img src="https://photos.zeepuertorico.com/OROCOVIS-JAYUYA-JUANA%20D%C3%8DAZ-Bosque%20Estatal%20de%20Toro%20Negro%5EP1030411-BIG.jpg" alt="Caminata de los Scouts en el Bosque Estatal Toro Negro" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700" referrerpolicy="no-referrer">
                             <div class="absolute top-4 left-4 bg-orange-600 text-white text-[10px] font-bold px-3 py-1 rounded-full">CAMINATA</div>
@@ -373,8 +351,7 @@
                         <a href="https://youtu.be/NL5QVFGtXrQ" target="_blank" class="text-orange-600 font-bold text-xs uppercase tracking-widest flex items-center">Ver en YouTube <i class="fas fa-arrow-right ml-2"></i></a>
                     </article>
 
-                    <!-- ARTÍCULO 5 (Extra) - Homenaje -->
-                    <article class="group scroll-reveal reveal-bottom">
+                    <article class="group scroll-reveal reveal-left">
                         <div class="overflow-hidden rounded-2xl mb-6 relative">
                             <img src="https://www.primerahora.com/pf/api/v3/content/fetch/image-resizer-v1?query=%7B%22website%22%3A%22primera-hora%22%2C%22imageUrl%22%3A%22https%3A%2F%2Farc-anglerfish-arc2-prod-gfrmedia.s3.amazonaws.com%2Fpublic%2FVSPXEF4ZSVHSFHBMRQLYFCB2K4.jpg%22%2C%22width%22%3A1200%2C%22height%22%3A675%2C%22redirect%22%3A%221%22%2C%22external%22%3A%221%22%7D" alt="Homenaje a Walter Murray Tropa 808" class="w-full h-64 object-cover group-hover:scale-110 transition duration-700" referrerpolicy="no-referrer">
                             <div class="absolute top-4 left-4 bg-indigo-900 text-white text-[10px] font-bold px-3 py-1 rounded-full">HONOR</div>
@@ -386,7 +363,6 @@
                     </article>
                 </div>
 
-                <!-- Contenedor del Botón Ver Más -->
                 <div id="ver-mas-container" class="hidden mt-12 text-center scroll-reveal reveal-bottom">
                     <button onclick="toggleRelatos()" id="btn-ver-mas" class="bg-indigo-50 text-indigo-950 border border-indigo-100 px-8 py-3.5 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-indigo-950 hover:text-white transition shadow-sm flex items-center justify-center mx-auto">
                         Ver más relatos <i class="fas fa-chevron-down ml-2"></i>
@@ -395,7 +371,7 @@
             </div>
         </section>
 
-        <!-- Galería (MOMENTOS 808) -->
+        <!-- Galería -->
         <section id="galeria" class="py-24 bg-indigo-950 text-white order-5 scroll-reveal reveal-right">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="flex justify-between items-center mb-12">
@@ -427,19 +403,15 @@
         <section id="contacto" class="py-16 order-6 scroll-reveal reveal-left">
             <div class="max-w-3xl mx-auto px-6">
                 <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
-                    <!-- Columna de contacto morada -->
                     <div class="bg-indigo-900 text-white p-8 md:w-5/12 flex flex-col justify-between relative overflow-hidden text-center">
                         <div>
                             <h4 class="text-2xl font-brand mb-4 uppercase">ÚNETE A LA RUTA</h4>
                             <p class="text-indigo-200 text-xs font-light mb-6">Inicia tu aventura scout hoy mismo.</p>
-                            
                             <div class="mb-4 flex justify-center">
                                 <img src="https://lh3.googleusercontent.com/d/1gIjwEdzzXzPWpsIFC6P7LMff1q9uiVcR" class="w-20 h-auto opacity-90" alt="Emblema Scout" referrerpolicy="no-referrer">
                             </div>
                         </div>
-
                         <div class="space-y-6 mt-4">
-                            <!-- Localización -->
                             <div>
                                 <span class="block text-[10px] font-bold text-orange-400 uppercase tracking-widest mb-2">Localización</span>
                                 <div class="space-y-2">
@@ -453,7 +425,6 @@
                         </div>
                     </div>
                     
-                    <!-- Columna de enlace blanca -->
                     <div class="p-8 md:p-10 md:w-7/12 flex flex-col justify-center items-center text-center">
                         <div class="mb-6">
                             <h4 class="text-xl font-bold text-indigo-950 mb-2">Inscripción Oficial</h4>
@@ -466,9 +437,8 @@
         </section>
     </main>
 
-    <!-- VISTA CONOCE MÁS (PÁGINA INTERACTIVA PREMIUM) -->
+    <!-- VISTA CONOCE MÁS -->
     <div id="conoce-mas-view" class="hidden min-h-screen bg-white">
-        <!-- Barra de navegación superior para volver -->
         <div class="sticky top-20 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 px-4 md:px-6 py-3 md:py-4 shadow-sm">
             <div class="max-w-7xl mx-auto flex justify-between items-center">
                 <button onclick="switchView('main')" class="flex items-center text-[10px] md:text-xs font-bold text-slate-500 hover:text-orange-600 transition uppercase tracking-widest bg-slate-50 px-3 md:px-4 py-2 rounded-lg border border-slate-200">
@@ -478,7 +448,6 @@
             </div>
         </div>
 
-        <!-- 1. Hero Bienvenida (Pág 2) -->
         <section class="relative min-h-[75vh] md:h-[70vh] flex items-center justify-center bg-indigo-950 py-16 md:py-0 overflow-hidden scroll-reveal reveal-right">
             <div class="absolute inset-0 bg-pattern opacity-10"></div>
             <div class="absolute -top-40 -right-40 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl"></div>
@@ -500,7 +469,6 @@
             </div>
         </section>
 
-        <!-- 2. Misión y Valores (Pág 3 y 5) -->
         <section class="py-16 md:py-24 bg-slate-50 relative overflow-hidden">
             <div class="absolute -top-40 -right-40 w-72 md:w-96 h-72 md:h-96 bg-orange-100 rounded-full blur-3xl opacity-50"></div>
             <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
@@ -512,7 +480,6 @@
                     <p class="text-slate-500 mt-2 md:mt-3 text-[10px] md:text-xs font-bold uppercase tracking-widest">Misión, Objetivos y Valores</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                    <!-- Tarjeta Mision -->
                     <div class="scroll-reveal reveal-left bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl md:hover:-translate-y-3 transition duration-500 border border-slate-100 group">
                         <div class="w-14 h-14 md:w-16 md:h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:bg-orange-500 group-hover:text-white transition duration-500 text-orange-600 text-xl md:text-2xl shadow-sm">
                             <i class="fas fa-bullseye"></i>
@@ -520,7 +487,6 @@
                         <h4 class="text-xl md:text-2xl font-brand text-indigo-950 mb-3 md:mb-4">Nuestra Misión</h4>
                         <p class="text-slate-600 text-sm leading-relaxed">Preparar jóvenes que puedan tomar decisiones éticas y morales por el resto de sus vidas, a través de la enseñanza de valores resumidos en la Ley y Promesa Escucha.</p>
                     </div>
-                    <!-- Tarjeta Objetivos -->
                     <div class="scroll-reveal reveal-bottom bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl md:hover:-translate-y-3 transition duration-500 border border-slate-100 group">
                         <div class="w-14 h-14 md:w-16 md:h-16 bg-indigo-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:bg-indigo-600 group-hover:text-white transition duration-500 text-indigo-600 text-xl md:text-2xl shadow-sm">
                             <i class="fas fa-shield-alt"></i>
@@ -532,7 +498,6 @@
                             <li class="flex items-start"><i class="fas fa-caret-right text-indigo-400 mt-1 mr-2"></i> <span><strong class="text-indigo-900 block">Aptitud Personal:</strong> Fomentamos el bienestar, la salud física, el conocimiento y la resiliencia.</span></li>
                         </ul>
                     </div>
-                    <!-- Tarjeta Valores -->
                     <div class="scroll-reveal reveal-right bg-white p-6 sm:p-8 md:p-10 rounded-3xl shadow-lg hover:shadow-2xl md:hover:-translate-y-3 transition duration-500 border border-slate-100 group">
                         <div class="w-14 h-14 md:w-16 md:h-16 bg-green-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 group-hover:bg-green-600 group-hover:text-white transition duration-500 text-green-600 text-xl md:text-2xl shadow-sm">
                             <i class="fas fa-heart"></i>
@@ -549,7 +514,6 @@
             </div>
         </section>
 
-        <!-- 3. Historia y Orígenes (Pág 5) -->
         <section class="py-16 md:py-24 bg-white relative overflow-hidden scroll-reveal reveal-left">
             <div class="absolute left-0 top-0 w-1/2 h-full bg-indigo-50/30 rounded-r-[200px] -z-10 hidden lg:block"></div>
             <div class="max-w-5xl mx-auto px-4 md:px-6 relative z-10">
@@ -581,7 +545,6 @@
             </div>
         </section>
 
-        <!-- 4. Identidad Visual (Pág 8, 9, 10) -->
         <section class="py-16 md:py-24 bg-indigo-950 text-white relative">
             <div class="absolute inset-0 bg-pattern opacity-10"></div>
             <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
@@ -638,12 +601,10 @@
             </div>
         </section>
 
-        <!-- 5. Actividades / Drone Video (Pág 11) -->
         <section class="py-16 md:py-32 relative bg-scroll md:bg-fixed bg-center bg-cover border-b-8 border-orange-600 scroll-reveal reveal-right" style="background-image: url('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=1920&q=80');">
             <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
             <div class="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
                 <div class="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
-                    
                     <div class="lg:w-1/2 text-white">
                         <span class="bg-orange-600 text-white font-bold uppercase tracking-widest text-[10px] px-3 py-1.5 rounded-full mb-4 md:mb-6 inline-block"><i class="fas fa-fire mr-1"></i> La Experiencia</span>
                         <h3 class="text-3xl sm:text-4xl md:text-6xl font-brand mb-6 md:mb-8 leading-none tracking-wide">ACTIVIDADES Y <span class="text-indigo-400 block mt-1 md:mt-2">AVENTURAS</span></h3>
@@ -667,13 +628,11 @@
                         </ul>
                     </div>
 
-                    <!-- REPRODUCTOR DRONE PREMIUM (AHORA FOTO) -->
                     <div class="lg:w-1/2 w-full">
                         <div class="relative rounded-3xl overflow-hidden shadow-[0_0_30px_rgba(234,88,12,0.2)] md:shadow-[0_0_50px_rgba(234,88,12,0.2)] border-[4px] md:border-[6px] border-white/10 aspect-video bg-black group">
                             <img src="https://lh3.googleusercontent.com/d/173FJUSUWUSya02XrGyK243Oq4X6hvUKX" alt="Aventuras Tropa 808" class="w-full h-full object-cover group-hover:scale-105 transition duration-700" referrerpolicy="no-referrer">
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -764,12 +723,10 @@
     <!-- VISTA INSIGNIA DE MÉRITO -->
     <section id="insignia-view" class="hidden pt-32 pb-24 bg-slate-50 min-h-screen">
         <div class="max-w-4xl mx-auto px-6">
-            <!-- Botón de regreso -->
             <button onclick="switchView('docs')" class="mb-10 flex items-center text-xs font-bold text-slate-500 hover:text-orange-600 transition uppercase tracking-widest">
                 <i class="fas fa-arrow-left mr-2"></i> Volver a Recursos
             </button>
 
-            <!-- Encabezado -->
             <div class="text-center mb-16 scroll-reveal reveal-right">
                 <img src="https://lh3.googleusercontent.com/d/1gIjwEdzzXzPWpsIFC6P7LMff1q9uiVcR" alt="Emblema Scout" class="mx-auto h-20 md:h-24 w-auto mb-6 object-contain drop-shadow-lg" referrerpolicy="no-referrer">
                 <h2 class="text-3xl md:text-5xl font-brand text-indigo-950 uppercase leading-none flex items-center justify-center gap-3">
@@ -777,7 +734,6 @@
                     Insignia de Mérito
                 </h2>
                 
-                <!-- Botón al Catálogo Oficial -->
                 <div class="mt-8">
                     <a href="https://www.scouting.org/skills/merit-badges/all/" target="_blank" class="inline-flex items-center bg-white border-2 border-indigo-100 text-indigo-950 px-6 md:px-8 py-3.5 rounded-xl font-bold uppercase text-xs md:text-sm tracking-widest hover:border-orange-500 hover:text-orange-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group">
                         <i class="fas fa-search mr-3 text-orange-500 text-lg group-hover:scale-110 transition"></i> 
@@ -787,10 +743,7 @@
                 </div>
             </div>
 
-            <!-- Línea de tiempo -->
             <div class="relative border-l-4 border-indigo-200 ml-4 md:ml-8 space-y-8 pb-8 scroll-reveal reveal-left" style="transition-delay: 0.2s;">
-                
-                <!-- Paso 1 a 12 (Simplificado visualmente en HTML) -->
                 <div class="relative pl-8 md:pl-12 group">
                     <div class="absolute -left-[18px] md:-left-[20px] top-4 w-8 h-8 md:w-10 md:h-10 bg-white border-4 border-indigo-600 text-indigo-600 rounded-full flex items-center justify-center font-bold text-sm shadow-md z-10">1</div>
                     <div class="bg-white p-5 md:p-6 rounded-xl shadow-md border border-slate-100 flex items-start gap-4 hover:border-orange-500 transition-all hover:-translate-y-1 hover:shadow-xl">
@@ -924,7 +877,6 @@
                 </div>
             </div>
 
-            <!-- Nota al pie -->
             <div class="mt-8 bg-white border-l-4 border-yellow-500 p-6 rounded-r-xl shadow-md flex items-start gap-4 scroll-reveal reveal-right" style="transition-delay: 0.4s;">
                 <i class="fas fa-info-circle text-indigo-600 text-2xl mt-0.5"></i>
                 <p class="text-indigo-950 font-medium text-sm md:text-base">
@@ -940,9 +892,8 @@
         </div>
     </section>
 
-    <!-- VISTA PLAN DE CAMINATA PREMIUM -->
+    <!-- VISTA PLAN DE CAMINATA -->
     <div id="caminata-plan-view" class="hidden min-h-screen bg-slate-50">
-        <!-- Barra de navegación superior -->
         <div class="sticky top-20 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 px-4 md:px-6 py-3 md:py-4 shadow-sm">
             <div class="max-w-7xl mx-auto flex justify-between items-center">
                 <button onclick="switchView('main'); setTimeout(() => window.scrollToSection('blog'), 100);" class="flex items-center text-[10px] md:text-xs font-bold text-slate-500 hover:text-orange-600 transition uppercase tracking-widest bg-slate-50 px-3 md:px-4 py-2 rounded-lg border border-slate-200">
@@ -952,7 +903,6 @@
             </div>
         </div>
 
-        <!-- Hero del Plan -->
         <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 flex items-center justify-center bg-center bg-cover border-b-8 border-orange-600 scroll-reveal reveal-right" style="background-image: url('https://lh3.googleusercontent.com/d/1jSEM9VcuZSXgt2K1mqwQddY5LQdj3Iwt');">
             <div class="absolute inset-0 bg-indigo-950/80 backdrop-blur-sm"></div>
             <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
@@ -965,13 +915,9 @@
             </div>
         </section>
 
-        <!-- Contenido Resumido -->
         <section class="max-w-6xl mx-auto px-6 py-16 -mt-10 relative z-20 scroll-reveal reveal-left" style="transition-delay: 0.2s;">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-                
-                <!-- Columna 1: Logística y Detalles -->
                 <div class="md:col-span-2 space-y-6 md:space-y-8">
-                    <!-- Tarjeta Info Principal -->
                     <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-slate-100 flex flex-col sm:flex-row gap-6 items-start">
                         <div class="w-16 h-16 bg-indigo-50 text-indigo-600 rounded-2xl flex items-center justify-center text-2xl shrink-0"><i class="far fa-calendar-alt"></i></div>
                         <div>
@@ -985,7 +931,6 @@
                         </div>
                     </div>
 
-                    <!-- Itinerario -->
                     <div class="bg-white p-6 md:p-8 rounded-3xl shadow-xl border border-slate-100">
                         <h3 class="font-brand text-2xl text-indigo-950 mb-6 flex items-center"><i class="fas fa-map-signs text-orange-500 mr-3"></i> Itinerario del Día</h3>
                         <div class="space-y-4">
@@ -1013,9 +958,7 @@
                     </div>
                 </div>
 
-                <!-- Columna 2: Equipo y Descarga -->
                 <div class="space-y-6 md:space-y-8">
-                    <!-- Uniforme y Equipo -->
                     <div class="bg-indigo-950 p-6 md:p-8 rounded-3xl shadow-2xl text-white relative overflow-hidden">
                         <i class="fas fa-backpack text-6xl text-white/5 absolute -top-2 -right-2"></i>
                         <h3 class="font-brand text-2xl text-orange-400 mb-4 relative z-10">Prepara tu Mochila</h3>
@@ -1040,7 +983,6 @@
                         </div>
                     </div>
 
-                    <!-- Botón de Descarga del Permiso -->
                     <div class="bg-orange-50 p-6 md:p-8 rounded-3xl shadow-inner border-2 border-orange-200 text-center">
                         <div class="w-16 h-16 bg-white text-orange-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4 shadow-md"><i class="fas fa-file-signature"></i></div>
                         <h3 class="font-brand text-2xl text-indigo-950 mb-2">Permiso Oficial</h3>
@@ -1056,208 +998,11 @@
         </section>
     </div>
 
-    <!-- NUEVA VISTA FIRST AID (SUB-PÁGINA PREMIUM) -->
-    <div id="first-aid-view" class="hidden min-h-screen bg-slate-50">
-        <!-- Barra de navegación superior -->
-        <div class="sticky top-20 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 px-4 md:px-6 py-3 md:py-4 shadow-sm">
-            <div class="max-w-7xl mx-auto flex justify-between items-center">
-                <button onclick="switchView('main'); setTimeout(() => window.scrollToSection('blog'), 100);" class="flex items-center text-[10px] md:text-xs font-bold text-slate-500 hover:text-orange-600 transition uppercase tracking-widest bg-slate-50 px-3 md:px-4 py-2 rounded-lg border border-slate-200">
-                    <i class="fas fa-arrow-left mr-2"></i> Volver a Bitácora
-                </button>
-                <span class="text-[9px] md:text-[10px] font-bold text-indigo-900 uppercase tracking-widest flex items-center"><i class="fas fa-briefcase-medical text-red-500 mr-2"></i> <span class="hidden sm:inline">First Aid Merit Badge</span><span class="sm:hidden">First Aid</span></span>
-            </div>
-        </div>
-
-        <!-- Hero del First Aid -->
-        <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 flex items-center justify-center bg-center bg-cover border-b-8 border-red-600 scroll-reveal reveal-right" style="background-image: url('https://lh3.googleusercontent.com/d/1VdeeccFsc38ioGLkm03yaDt_ciqpc99H');">
-            <div class="absolute inset-0 bg-slate-900/80 backdrop-blur-sm"></div>
-            
-            <!-- Iconos de Compartir (Flotantes en Hero) -->
-            <div class="absolute bottom-4 right-4 md:bottom-8 md:right-8 z-30 flex flex-col items-end">
-                <!-- Menú de opciones (Oculto por defecto) -->
-                <div id="share-menu-first-aid" class="flex gap-3 mb-3 opacity-0 pointer-events-none transition-all duration-300 translate-y-2 origin-bottom relative">
-                    <span id="copy-msg-first-aid" class="absolute -top-10 right-0 text-[10px] text-white font-bold uppercase tracking-widest opacity-0 transition-opacity duration-300 whitespace-nowrap bg-green-500 px-3 py-1.5 rounded-lg shadow-lg pointer-events-none">¡Copiado!</span>
-                    <button onclick="copyShareUrl('first-aid'); toggleShareMenu('first-aid')" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-slate-800/80 backdrop-blur-md border border-slate-400 text-white hover:bg-slate-700 flex items-center justify-center transition duration-300 shadow-xl group" title="Copiar Enlace">
-                        <i class="fas fa-link text-sm md:text-base group-hover:scale-110 transition"></i>
-                    </button>
-                    <button onclick="shareWhatsApp('first-aid', 'Descubre cómo se prepara un scout para emergencias reales. First Aid Merit Badge - Tropa 808:'); toggleShareMenu('first-aid')" class="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#25D366] text-white hover:bg-[#128C7E] border border-transparent flex items-center justify-center transition duration-300 shadow-xl group" title="Compartir en WhatsApp">
-                        <i class="fab fa-whatsapp text-lg md:text-xl group-hover:scale-110 transition"></i>
-                    </button>
-                </div>
-                
-                <!-- Botón COMPARTIR principal -->
-                <button onclick="toggleShareMenu('first-aid')" class="bg-black/60 backdrop-blur-md border border-white/30 text-white px-4 py-2 md:px-5 md:py-2.5 rounded-lg hover:bg-black/80 hover:border-white/60 flex items-center justify-center transition duration-300 shadow-xl group text-xs md:text-sm font-bold uppercase tracking-widest">
-                    <i class="fas fa-share-nodes mr-2"></i> COMPARTIR
-                </button>
-            </div>
-
-            <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white">
-                
-                <!-- Logo del Merit Badge -->
-                <img src="https://lh3.googleusercontent.com/d/1UyOWhEGw_xyHGJYGZezITEyofjVbjslm" alt="Logo First Aid Merit Badge" class="h-24 md:h-32 w-auto mx-auto mb-6 object-contain drop-shadow-2xl hover:scale-105 transition duration-500" referrerpolicy="no-referrer">
-                
-                <span class="bg-red-600 text-white font-bold uppercase tracking-widest text-[10px] px-4 py-1.5 rounded-full mb-6 inline-block shadow-lg"><i class="fas fa-shield-alt mr-1"></i> Merit Badge Series</span>
-                <h2 class="text-4xl md:text-6xl font-brand mb-6 leading-none flex items-center justify-center flex-wrap gap-4">
-                    FIRST AID
-                </h2>
-                <p class="text-lg md:text-xl font-light text-slate-200 leading-relaxed max-w-2xl mx-auto">Preparando a los scouts para emergencias reales. Aprende las técnicas vitales para responder con rapidez y seguridad.</p>
-            </div>
-        </section>
-
-        <!-- Contenido First Aid -->
-        <section class="max-w-5xl mx-auto px-6 py-16 -mt-10 relative z-20 scroll-reveal reveal-left" style="transition-delay: 0.2s;">
-            <div class="bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden">
-                <div class="p-8 md:p-12 space-y-12">
-                    
-                    <!-- Intro y Video -->
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                        <div class="space-y-4">
-                            <div class="flex justify-between items-start">
-                                <!-- Reemplazo de icono por la imagen de la insignia -->
-                                <img src="https://lh3.googleusercontent.com/d/1UyOWhEGw_xyHGJYGZezITEyofjVbjslm" alt="Insignia First Aid" class="w-20 md:w-24 h-auto object-contain drop-shadow-md mb-4 hover:-translate-y-1 transition duration-300" referrerpolicy="no-referrer">
-                            </div>
-                            <h3 class="font-brand text-2xl md:text-4xl text-indigo-950 leading-tight">Insignia de Primeros Auxilios</h3>
-                            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-                                La insignia de mérito de <strong>First Aid (Primeros Auxilios)</strong> es un requisito fundamental y obligatorio para obtener el rango de Eagle Scout.
-                            </p>
-                            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-                                Esta insignia proporciona a los Scouts el conocimiento y las habilidades críticas necesarias para manejar emergencias médicas, brindándoles la confianza para actuar de manera racional cuando alguien está enfermo o herido.
-                            </p>
-                            <p class="text-slate-600 leading-relaxed text-sm md:text-base">
-                                A través de este programa, el Scout aprende a ser el primer respondedor ante accidentes, tratando condiciones que amenazan la vida y estabilizando a las víctimas hasta que llegue el personal médico profesional.
-                            </p>
-                        </div>
-                        
-                        <!-- Video Embed -->
-                        <div class="flex flex-col gap-2">
-                            <div class="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-100 aspect-video bg-black group">
-                                <iframe class="w-full h-full absolute inset-0" src="https://www.youtube.com/embed/WWd_CUlnUcM?si=TKp9hAY4Bb6djK9W" title="First Aid Merit Badge" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                    </div>
-
-                    <hr class="border-slate-200 border-2 rounded-full">
-
-                    <!-- Lista de Requisitos (Resumida) -->
-                    <div>
-                        <div class="text-center mb-10">
-                            <h3 class="font-brand text-3xl md:text-4xl text-indigo-950 mb-3 uppercase flex items-center justify-center flex-wrap">
-                                <img src="https://lh3.googleusercontent.com/d/1gIjwEdzzXzPWpsIFC6P7LMff1q9uiVcR" class="h-[1em] w-auto mr-3 inline-block align-middle drop-shadow-sm" alt="Flor de Lis Scout" referrerpolicy="no-referrer">
-                                Áreas de Dominio
-                            </h3>
-                            <p class="text-slate-500 text-sm md:text-base max-w-2xl mx-auto">A continuación, te presentamos un resumen de las competencias clave que debes dominar para obtener la insignia. Para ver los 16 requisitos detallados paso a paso, consulta el manual oficial al final de la página.</p>
-                        </div>
-
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <!-- Área 1: Preparación -->
-                            <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-lg hover:shadow-xl hover:border-red-300 transition-all group">
-                                <div class="w-12 h-12 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-xl mb-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-                                    <i class="fas fa-briefcase-medical"></i>
-                                </div>
-                                <h4 class="font-bold text-indigo-950 text-lg mb-2">Preparación y Prevención</h4>
-                                <p class="text-slate-600 text-sm leading-relaxed">
-                                    Conocimiento sólido de los primeros auxilios básicos (rangos anteriores). Preparación e inspección de botiquines personales y de tropa. Medidas de higiene para prevenir infecciones y cómo solicitar ayuda médica desde lugares remotos.
-                                </p>
-                            </div>
-
-                            <!-- Área 2: Emergencias Críticas -->
-                            <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-lg hover:shadow-xl hover:border-red-300 transition-all group">
-                                <div class="w-12 h-12 rounded-2xl bg-red-50 text-red-600 flex items-center justify-center text-xl mb-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
-                                    <i class="fas fa-heartbeat"></i>
-                                </div>
-                                <h4 class="font-bold text-indigo-950 text-lg mb-2">Emergencias Críticas y RCP</h4>
-                                <p class="text-slate-600 text-sm leading-relaxed">
-                                    Evaluación rápida de la escena (Triage). Reconocimiento y acción ante un estado de shock, ataque cardíaco o derrame cerebral. Dominio técnico de la Reanimación Cardiopulmonar (RCP) y uso correcto del Desfibrilador (DEA).
-                                </p>
-                            </div>
-
-                            <!-- Área 3: Traumas y Lesiones -->
-                            <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-lg hover:shadow-xl hover:border-red-300 transition-all group">
-                                <div class="w-12 h-12 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center text-xl mb-4 group-hover:bg-orange-600 group-hover:text-white transition-colors">
-                                    <i class="fas fa-bone"></i>
-                                </div>
-                                <h4 class="font-bold text-indigo-950 text-lg mb-2">Traumas y Lesiones Severas</h4>
-                                <p class="text-slate-600 text-sm leading-relaxed">
-                                    Control avanzado de sangrado (uso de torniquetes). Inmovilización correcta de fracturas y dislocaciones en diferentes extremidades. Cuidado y estabilización de víctimas con posibles lesiones de cuello o columna vertebral.
-                                </p>
-                            </div>
-
-                            <!-- Área 4: Condiciones y Rescate -->
-                            <div class="bg-white p-6 md:p-8 rounded-3xl border border-slate-100 shadow-lg hover:shadow-xl hover:border-red-300 transition-all group">
-                                <div class="w-12 h-12 rounded-2xl bg-green-50 text-green-600 flex items-center justify-center text-xl mb-4 group-hover:bg-green-600 group-hover:text-white transition-colors">
-                                    <i class="fas fa-hands-helping"></i>
-                                </div>
-                                <h4 class="font-bold text-indigo-950 text-lg mb-2">Condiciones Médicas y Rescate</h4>
-                                <p class="text-slate-600 text-sm leading-relaxed">
-                                    Tratamiento de anafilaxia, asma, quemaduras, congelación, golpe de calor y otras condiciones climáticas. Toma de decisiones sobre cuándo y cómo mover a un herido, incluyendo la improvisación de una camilla de rescate.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Botón para expandir requisitos oficiales -->
-                        <div class="mt-10 text-center scroll-reveal reveal-bottom">
-                            <button onclick="toggleFirstAidReqs()" id="btn-first-aid-reqs" class="bg-white border-2 border-indigo-100 text-indigo-950 px-8 py-3.5 rounded-xl font-bold uppercase text-xs tracking-widest hover:border-red-500 hover:text-red-600 transition shadow-sm flex items-center justify-center mx-auto">
-                                Ver todos los requisitos oficiales <i class="fas fa-chevron-down ml-2"></i>
-                            </button>
-                        </div>
-
-                        <!-- Lista completa oculta -->
-                        <div id="full-first-aid-reqs" class="hidden mt-8 transition-all duration-500">
-                            <div class="bg-slate-50 p-6 md:p-10 rounded-3xl border border-slate-200 shadow-inner">
-                                <h4 class="font-brand text-2xl md:text-3xl text-indigo-950 mb-6 border-b border-slate-200 pb-4"><i class="fas fa-clipboard-list text-red-600 mr-3"></i> Lista Oficial de Requisitos</h4>
-                                <ul class="space-y-4 text-sm md:text-base text-slate-600">
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">1. Manejo de Emergencias Médicas:</strong> Evaluar la seguridad de la escena, manejar la emergencia hasta que llegue ayuda y explicar las precauciones universales para evitar la transmisión de infecciones (uso de barreras protectoras).</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">2. Botiquines de Primeros Auxilios:</strong> Preparar un botiquín para el hogar y, junto con un líder adulto, inspeccionar el botiquín de la tropa para verificar que esté completo.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">3. Condiciones que Amenazan la Vida:</strong> Describir los signos, síntomas y las acciones inmediatas que se deben tomar ante un choque circulatorio (shock), un ataque cardíaco o un accidente cerebrovascular (derrame).</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">4. Heridas Abiertas y Hemorragias:</strong> Mostrar cómo tratar heridas abiertas leves y graves, y explicar cuándo es apropiado (y cuándo no) el uso de un torniquete.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">5. Emergencias Respiratorias, RCP y DEA:</strong> Explicar los pasos de la Reanimación Cardiopulmonar (RCP) y demostrar el uso de un Desfibrilador Externo Automático (DEA), además de identificar su ubicación en lugares comunes.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">6. Pérdida de Conocimiento:</strong> Identificar las causas y demostrar el tratamiento para personas que han perdido el conocimiento o están en estado de inconsciencia.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">7. Envenenamiento:</strong> Describir qué hacer en caso de ingestión de sustancias venenosas y cómo contactar a los centros de control de envenenamiento.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">8. Picaduras y Mordeduras:</strong> Demostrar el tratamiento para picaduras de insectos, mordeduras de animales (rabia) y mordeduras de serpientes venenosas.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">9. Lesiones Ambientales (Calor y Frío):</strong> Describir síntomas y tratamiento para hipotermia, congelación, deshidratación, calambres por calor, agotamiento por calor e insolación (golpe de calor).</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">10. Fracturas y Dislocaciones:</strong> Identificar los signos de huesos rotos o articulaciones fuera de lugar y demostrar cómo inmovilizarlos correctamente mediante el uso de férulas o cabestrillos.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">11. Lesiones de Cabeza, Cuello y Espalda:</strong> Explicar la importancia de no mover a la víctima, los síntomas de una conmoción cerebral y cómo estabilizar a alguien con sospecha de lesión en la columna.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">12. Traslado de Heridos:</strong> Describir en qué situaciones es necesario mover a un herido y demostrar métodos seguros para hacerlo, incluyendo la improvisación de una camilla.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">13. Solicitud de Asistencia de Emergencia:</strong> Explicar cómo obtener ayuda médica desde el hogar, en una expedición en la naturaleza o durante una actividad en mar abierto.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">14. Triage:</strong> Definir el término "triage" y explicar cómo se prioriza la atención médica cuando hay múltiples víctimas en un accidente.</span></li>
-                                    <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg shrink-0"></i> <span><strong class="text-indigo-900">15. Seguridad Psicológica:</strong> Describir las señales de que alguien puede ser un peligro para sí mismo o para otros y qué acciones se deben tomar en esos casos.</span></li>
-                                </ul>
-                                
-                                <!-- Enlace Oficial de Scouting.org -->
-                                <div class="mt-8 pt-6 border-t border-slate-200 flex justify-center">
-                                    <a href="https://www.scouting.org/merit-badges/first-aid/" target="_blank" class="bg-indigo-100 text-indigo-900 px-6 py-2.5 rounded-lg font-bold uppercase text-xs tracking-widest hover:bg-indigo-900 hover:text-white transition shadow-sm flex items-center group">
-                                        <i class="fas fa-external-link-alt mr-2 group-hover:scale-110 transition"></i> Ver página oficial en Scouting.org
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                
-                <!-- Footer Card -->
-                <div class="bg-slate-50 p-8 border-t border-slate-200 text-center">
-                    <p class="text-slate-500 italic mb-6">"Estar preparado no es solo un lema, es un estilo de vida."</p>
-                    <div class="flex flex-wrap justify-center gap-4">
-                        <button onclick="switchView('main'); setTimeout(() => window.scrollToSection('blog'), 100);" class="bg-indigo-900 text-white px-8 py-3.5 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-orange-600 transition shadow-md">
-                            Volver a la Bitácora
-                        </button>
-                        <!-- Enlace al Manual Oficial -->
-                        <a href="https://drive.google.com/file/d/1xbjK20kBtXDC9q3aEIr8FIraKLDdIdzT/view?usp=sharing" target="_blank" class="bg-red-600 text-white border border-red-700 px-8 py-3.5 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-indigo-950 transition shadow-lg flex items-center">
-                            <i class="fas fa-book-medical mr-2 text-lg"></i> Manual Oficial del Merit Badge
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- Footer con degradado Scout -->
+    <!-- Footer -->
     <footer class="bg-scout-gradient text-white py-20 px-6 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-pattern"></div>
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-12 relative z-10">
             
-            <!-- Columna Izquierda: Logo y Contacto -->
             <div class="flex flex-col items-center md:items-start gap-6">
                 <div class="flex items-center space-x-5">
                     <div class="bg-white p-1 rounded-full shadow-2xl">
@@ -1291,7 +1036,6 @@
                 </div>
             </div>
             
-            <!-- Columna Central: Redes y Enlaces -->
             <div class="text-center flex flex-col items-center pt-2 md:pt-0">
                 <img src="https://lh3.googleusercontent.com/d/1JxxI4W3lAWXwNc9A31-PvO2F7P2OX9WM" class="h-28 mx-auto mb-6 brightness-0 invert opacity-90 hover:opacity-100 transition" referrerpolicy="no-referrer">
                 <p class="text-[10px] font-bold text-white/60 uppercase tracking-widest leading-relaxed mb-4">© 2026 Tropa 808 de Puerto Rico • Siempre Listos ⚜️</p>
@@ -1332,12 +1076,10 @@
     <!-- MODAL DE DETALLES DEL EVENTO -->
     <div id="event-modal" class="fixed inset-0 bg-indigo-950/80 backdrop-blur-sm z-[110] hidden flex items-center justify-center p-4 transition-opacity duration-300" onclick="closeEventModal()">
         <div class="bg-white rounded-3xl p-6 md:p-8 max-w-lg w-[95%] md:w-full relative shadow-2xl max-h-[85vh] overflow-y-auto" onclick="event.stopPropagation()">
-            <!-- Botón de Cerrar -->
             <button onclick="closeEventModal()" class="absolute top-5 right-5 w-8 h-8 flex items-center justify-center bg-slate-100 hover:bg-orange-100 text-slate-500 hover:text-orange-600 rounded-full transition-colors">
                 <i class="fas fa-times text-lg"></i>
             </button>
             
-            <!-- Etiqueta de Fecha y Color -->
             <div class="flex items-center gap-3 mb-4">
                 <div id="modal-color" class="w-3 h-8 rounded-full bg-indigo-600 shadow-sm"></div>
                 <div>
@@ -1346,12 +1088,9 @@
                 </div>
             </div>
             
-            <!-- Título -->
             <h3 id="modal-title" class="text-3xl md:text-4xl font-brand text-indigo-950 mb-6 leading-none tracking-tight"></h3>
             
-            <!-- Contenedor de Detalles -->
             <div class="space-y-4">
-                <!-- Hora -->
                 <div class="flex items-start gap-4">
                     <div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0">
                         <i class="far fa-clock text-lg"></i>
@@ -1362,7 +1101,6 @@
                     </div>
                 </div>
 
-                <!-- Lugar -->
                 <div id="modal-location-container" class="flex items-start gap-4 hidden">
                     <div class="w-10 h-10 rounded-xl bg-orange-50 flex items-center justify-center text-orange-600 shrink-0">
                         <i class="fas fa-map-marker-alt text-lg"></i>
@@ -1373,7 +1111,6 @@
                     </div>
                 </div>
                 
-                <!-- Notas / Descripción -->
                 <div id="modal-description-container" class="flex items-start gap-4 hidden">
                     <div class="w-10 h-10 rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
                         <i class="fas fa-align-left text-lg"></i>
@@ -1407,21 +1144,15 @@
             const insignia = document.getElementById('insignia-view');
             const conoce = document.getElementById('conoce-mas-view');
             const caminataPlan = document.getElementById('caminata-plan-view');
-            const firstAid = document.getElementById('first-aid-view');
             
-            // Ocultar todas las vistas
             main.classList.add('hidden');
             docs.classList.add('hidden');
             if(insignia) insignia.classList.add('hidden');
             if(conoce) conoce.classList.add('hidden');
             if(caminataPlan) caminataPlan.classList.add('hidden');
-            if(firstAid) firstAid.classList.add('hidden');
             
-            // --- FIX DE ANIMACIONES ---
-            // Removemos "reveal-active" para que los elementos se reinicien al cambiar de vista
             document.querySelectorAll('.scroll-reveal').forEach(el => el.classList.remove('reveal-active'));
             
-            // Mostrar la seleccionada y actualizar URL
             if (v === 'docs') { 
                 docs.classList.remove('hidden'); 
                 try { window.history.pushState(null, null, '#recursos'); } catch(e) {}
@@ -1434,19 +1165,15 @@
             } else if (v === 'caminata-plan') {
                 if(caminataPlan) caminataPlan.classList.remove('hidden'); 
                 try { window.history.pushState(null, null, '#plan-caminata'); } catch(e) {}
-            } else if (v === 'first-aid') {
-                if(firstAid) firstAid.classList.remove('hidden'); 
-                try { window.history.pushState(null, null, '#first-aid'); } catch(e) {}
             } else { 
                 main.classList.remove('hidden'); 
-                if (['#recursos', '#insignia', '#conoce-mas', '#plan-caminata', '#first-aid'].includes(window.location.hash)) {
+                if (window.location.hash === '#recursos' || window.location.hash === '#insignia' || window.location.hash === '#conoce-mas' || window.location.hash === '#plan-caminata') {
                     try { window.history.pushState(null, null, window.location.pathname + window.location.search); } catch(e) {}
                 }
             }
             
             window.scrollTo({ top: 0, behavior: 'smooth' });
             
-            // Re-ejecutar observer de animaciones para nuevas vistas
             setTimeout(() => {
                 revealElements();
             }, 100);
@@ -1470,16 +1197,15 @@
             if (mobileMenu) mobileMenu.classList.remove('active');
         });
 
-        // --- OBSERVER DE ANIMACIONES (SCROLL REVEAL) ---
+        // --- OBSERVER DE ANIMACIONES ---
         function revealElements() {
             var reveals = document.querySelectorAll(".scroll-reveal");
             for (var i = 0; i < reveals.length; i++) {
-                // FIX: Omitir elementos que están ocultos porque pertenecen a otra vista
                 if (reveals[i].offsetParent === null) continue;
 
                 var windowHeight = window.innerHeight;
                 var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 50; // Umbral ajustado para que se active más rápido
+                var elementVisible = 50;
 
                 if (elementTop < windowHeight - elementVisible) {
                     reveals[i].classList.add("reveal-active");
@@ -1513,7 +1239,7 @@
             document.getElementById('lightbox-counter').innerText = `IMAGEN ${currentPhotoIndex + 1} DE ${galleryImages.length}`;
         }
 
-        // --- CALENDARIO ---
+        // --- CALENDARIO & AGENDAS ---
         const themes = {
             purpura: { b: 'border-indigo-600', bg: 'bg-indigo-600', tb: 'bg-indigo-50', tc: 'text-indigo-600' },
             naranja: { b: 'border-orange-500', bg: 'bg-orange-500', tb: 'bg-orange-50', tc: 'text-orange-600' },
@@ -1531,9 +1257,29 @@
         let globalRawEvents = [];
         let calendarInstance = null;
 
+        // Función auxiliar para verificar si hay agenda asociada
+        function checkAndSetAgendaBtn(isoDateStr) {
+            const agendaBtn = document.getElementById('modal-agenda-btn');
+            if (!agendaBtn) return;
+            
+            // Verificación exacta por fecha ISO (YYYY-MM-DD)
+            if (isoDateStr === "2026-03-07") {
+                agendaBtn.href = "https://drive.google.com/file/d/1YvLFaNFcteDktGKDb_61L_Nh2UsyL6fZ/view?usp=sharing";
+                agendaBtn.classList.remove('hidden');
+                agendaBtn.classList.add('flex');
+            } else if (isoDateStr === "2026-03-21") {
+                agendaBtn.href = "https://drive.google.com/file/d/1jp9nwElsW2vMXalx3cXZMecV2_BRUxBv/view?usp=sharing";
+                agendaBtn.classList.remove('hidden');
+                agendaBtn.classList.add('flex');
+            } else {
+                agendaBtn.classList.add('hidden');
+                agendaBtn.classList.remove('flex');
+            }
+        }
+
         async function fetchEvents() {
-            const cachedData = localStorage.getItem('tropa808_v11_events');
-            const cacheTime = localStorage.getItem('tropa808_v11_events_time');
+            const cachedData = localStorage.getItem('tropa808_v12_events');
+            const cacheTime = localStorage.getItem('tropa808_v12_events_time');
             const now = new Date().getTime();
             const todayComp = new Date().setHours(0,0,0,0); 
             
@@ -1613,10 +1359,13 @@
                             if (endMatch) endDate = parseIcsDateForPR(endMatch[1]);
 
                             let startStr, endStr = null;
+                            let isoDateSimple = `${dateStr.substring(0, 4)}-${dateStr.substring(4, 6)}-${dateStr.substring(6, 8)}`;
+                            
                             if (!dateStr.includes('T')) {
-                                startStr = `${dateStr.substring(0, 4)}-${dateStr.substring(4, 6)}-${dateStr.substring(6, 8)}`;
+                                startStr = isoDateSimple;
                             } else {
                                 startStr = formatLocalISO(eventDate);
+                                isoDateSimple = `${eventDate.getFullYear()}-${pad(eventDate.getMonth()+1)}-${pad(eventDate.getDate())}`;
                             }
                             
                             if (endDate && endMatch) {
@@ -1647,6 +1396,7 @@
                                 source: cal.source,
                                 start: startStr, 
                                 end: endStr,
+                                isoDate: isoDateSimple,
                                 allDay: !dateStr.includes('T'),
                                 y: eventDate.getFullYear(), m: eventDate.getMonth(), d: eventDate.getDate(), 
                                 comp: eventDate.getTime() + Math.random(),
@@ -1654,7 +1404,8 @@
                                 borderColor: 'transparent',
                                 extendedProps: {
                                     location: locMatch ? locMatch[1].trim() : "",
-                                    description: cleanDesc
+                                    description: cleanDesc,
+                                    isoDate: isoDateSimple
                                 }
                             };
                         }).filter(e => e !== null);
@@ -1666,8 +1417,8 @@
                 globalRawEvents = results.flat().sort((a,b) => a.comp - b.comp);
 
                 if (globalRawEvents.length > 0) {
-                    localStorage.setItem('tropa808_v11_events', JSON.stringify(globalRawEvents));
-                    localStorage.setItem('tropa808_v11_events_time', now.toString());
+                    localStorage.setItem('tropa808_v12_events', JSON.stringify(globalRawEvents));
+                    localStorage.setItem('tropa808_v12_events_time', now.toString());
                     processAndRender(todayComp);
                 } else if (!cachedData) {
                     const container1 = document.getElementById('event-cards-container');
@@ -1766,26 +1517,12 @@
                         descContainer.classList.add('hidden');
                     }
                     
-                    const agendaBtn = document.getElementById('modal-agenda-btn');
+                    // Extraer fecha ISO estandarizada
                     const eventDateObj = new Date(ev.start);
+                    const pad = n => String(n).padStart(2, '0');
+                    const isoDateStr = ev.extendedProps.isoDate || `${eventDateObj.getFullYear()}-${pad(eventDateObj.getMonth()+1)}-${pad(eventDateObj.getDate())}`;
                     
-                    let agendaUrl = null;
-                    if (eventDateObj.getFullYear() === 2026 && eventDateObj.getMonth() === 2) {
-                        if (eventDateObj.getDate() === 7) {
-                            agendaUrl = "https://drive.google.com/file/d/1YvLFaNFcteDktGKDb_61L_Nh2UsyL6fZ/view?usp=sharing";
-                        } else if (eventDateObj.getDate() === 14) {
-                            agendaUrl = "https://drive.google.com/file/d/1fYd5vydAhBClaUFr196h93cLb7mrqmZ_/view?usp=sharing";
-                        }
-                    }
-                    
-                    if (agendaUrl) {
-                        agendaBtn.href = agendaUrl;
-                        agendaBtn.classList.remove('hidden');
-                        agendaBtn.classList.add('flex');
-                    } else {
-                        agendaBtn.classList.add('hidden');
-                        agendaBtn.classList.remove('flex');
-                    }
+                    checkAndSetAgendaBtn(isoDateStr);
                     
                     document.getElementById('event-modal').classList.remove('hidden');
                     setTimeout(() => { document.getElementById('event-modal').classList.remove('opacity-0'); }, 10);
@@ -1853,25 +1590,9 @@
                 descContainer.classList.add('hidden');
             }
             
-            const agendaBtn = document.getElementById('modal-agenda-btn');
-            
-            let agendaUrl = null;
-            if (d.getFullYear() === 2026 && d.getMonth() === 2) {
-                if (d.getDate() === 7) {
-                    agendaUrl = "https://drive.google.com/file/d/1YvLFaNFcteDktGKDb_61L_Nh2UsyL6fZ/view?usp=sharing";
-                } else if (d.getDate() === 14) {
-                    agendaUrl = "https://drive.google.com/file/d/1fYd5vydAhBClaUFr196h93cLb7mrqmZ_/view?usp=sharing";
-                }
-            }
-            
-            if (agendaUrl) {
-                agendaBtn.href = agendaUrl;
-                agendaBtn.classList.remove('hidden');
-                agendaBtn.classList.add('flex');
-            } else {
-                agendaBtn.classList.add('hidden');
-                agendaBtn.classList.remove('flex');
-            }
+            const pad = n => String(n).padStart(2, '0');
+            const isoDateStr = ev.isoDate || `${ev.y}-${pad(ev.m + 1)}-${pad(ev.d)}`;
+            checkAndSetAgendaBtn(isoDateStr);
             
             const modal = document.getElementById('event-modal');
             modal.classList.remove('hidden');
@@ -2044,11 +1765,8 @@
                     if (calendarInstance) {
                         setTimeout(() => { 
                             calendarInstance.render(); 
-                            
-                            // Auto-scroll y animación en TODAS las pantallas (Mobile y Desktop)
                             googleCal.classList.add('reveal-active');
                             
-                            // Ajustamos el margen dependiendo de si es celular o PC
                             const headerOffset = window.innerWidth < 768 ? 85 : 100; 
                             const elementPosition = googleCal.getBoundingClientRect().top;
                             const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
@@ -2106,86 +1824,6 @@
             }
         };
 
-        // --- TOGGLE REQUISITOS FIRST AID ---
-        window.toggleFirstAidReqs = () => {
-            const reqsDiv = document.getElementById('full-first-aid-reqs');
-            const btn = document.getElementById('btn-first-aid-reqs');
-            if(reqsDiv.classList.contains('hidden')) {
-                reqsDiv.classList.remove('hidden');
-                btn.innerHTML = 'Ocultar requisitos oficiales <i class="fas fa-chevron-up ml-2"></i>';
-                btn.classList.add('border-red-500', 'text-red-600');
-            } else {
-                reqsDiv.classList.add('hidden');
-                btn.innerHTML = 'Ver todos los requisitos oficiales <i class="fas fa-chevron-down ml-2"></i>';
-                btn.classList.remove('border-red-500', 'text-red-600');
-            }
-        };
-
-        // --- COMPARTIR ARTÍCULOS ---
-        window.toggleShareMenu = (viewId) => {
-            const menu = document.getElementById('share-menu-' + viewId);
-            if (menu) {
-                menu.classList.toggle('opacity-0');
-                menu.classList.toggle('pointer-events-none');
-                menu.classList.toggle('translate-y-2');
-            }
-        };
-
-        // Cerrar menú de compartir al hacer click afuera
-        document.addEventListener('click', (e) => {
-            const menus = document.querySelectorAll('[id^="share-menu-"]');
-            menus.forEach(menu => {
-                const btn = menu.nextElementSibling;
-                if (!menu.contains(e.target) && btn && !btn.contains(e.target)) {
-                    menu.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
-                }
-            });
-        });
-
-        window.getShareUrl = (viewId) => {
-            return window.location.origin + window.location.pathname + '#' + viewId;
-        };
-
-        window.copyShareUrl = (viewId) => {
-            const url = window.getShareUrl(viewId);
-            // Intentar usar clipboard API primero
-            if (navigator.clipboard && window.isSecureContext) {
-                navigator.clipboard.writeText(url).then(() => showCopyMsg(viewId)).catch(() => fallbackCopy(url, viewId));
-            } else {
-                fallbackCopy(url, viewId);
-            }
-        };
-
-        const fallbackCopy = (url, viewId) => {
-            const textArea = document.createElement("textarea");
-            textArea.value = url;
-            textArea.style.position = "fixed";
-            textArea.style.left = "-9999px";
-            document.body.appendChild(textArea);
-            textArea.select();
-            try {
-                document.execCommand('copy');
-                showCopyMsg(viewId);
-            } catch (err) {
-                console.error('Error al copiar', err);
-            }
-            document.body.removeChild(textArea);
-        };
-
-        window.showCopyMsg = (viewId) => {
-            const msg = document.getElementById('copy-msg-' + viewId);
-            if(msg) {
-                msg.classList.remove('opacity-0');
-                setTimeout(() => msg.classList.add('opacity-0'), 2500);
-            }
-        };
-
-        window.shareWhatsApp = (viewId, text) => {
-            const url = window.getShareUrl(viewId);
-            const encodedText = encodeURIComponent(text + " " + url);
-            window.open(`https://api.whatsapp.com/send?text=${encodedText}`, '_blank');
-        };
-
         window.onload = () => { 
             fetchEvents(); 
             initRelatos(); 
@@ -2198,8 +1836,6 @@
                 switchView('conoce-mas');
             } else if (window.location.hash === '#plan-caminata') {
                 switchView('caminata-plan');
-            } else if (window.location.hash === '#first-aid') {
-                switchView('first-aid');
             }
             
             revealElements();
