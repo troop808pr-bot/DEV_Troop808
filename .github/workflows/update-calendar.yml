@@ -2,9 +2,8 @@ name: Actualizar Calendario de la Tropa 808
 
 on:
   schedule:
-    # Se ejecuta automáticamente cada 6 horas
     - cron: '0 */6 * * *'
-  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub si lo necesitas
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -19,7 +18,7 @@ jobs:
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
       - name: Generar JSON del Calendario
         run: |
