@@ -1,9 +1,9 @@
 const fs = require('fs');
 
 const calIds = {
-    tropa: "troop808pr%40gmail.com",
-    oa: "7803ec765a89e88d9dc72ef1a267b6d4e1b75a32c4cf00820af8bffb5bac2d6f%40group.calendar.google.com",
-    distrito: "887a472df723b4721b7c9f23649439b2b73bc64a94eb40d4c1e776df955977ba%40group.calendar.google.com"
+    tropa: "troop808pr@gmail.com",
+    oa: "7803ec765a89e88d9dc72ef1a267b6d4e1b75a32c4cf00820af8bffb5bac2d6f@group.calendar.google.com",
+    distrito: "887a472df723b4721b7c9f23649439b2b73bc64a94eb40d4c1e776df955977ba@group.calendar.google.com"
 };
 
 const calendars = [
@@ -40,9 +40,19 @@ async function buildCalendar() {
 
     for (const cal of calendars) {
         try {
-            const iCalUrl = `https://calendar.google.com/calendar/ical/${cal.id}/public/basic.ics`;
-            const response = await fetch(iCalUrl);
-            if (!response.ok) throw new Error(`HTTP Error ${response.status}`);
+            const encodedId = encodeURIComponent(cal.id);
+            const iCalUrl = `https://calendar.google.com/calendar/ical/${encodedId}/public/basic.ics`;
+            
+            const response = await fetch(iCalUrl, {
+                headers: {
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+                }
+            });
+            
+            if (!response.ok) {
+                console.error(`Error obteniendo ${cal.source}: Status ${response.status}`);
+                continue;
+            }
             
             const rawICal = await response.text();
             const unfolded = rawICal.replace(/\r?\n[ \t]/g, "");
