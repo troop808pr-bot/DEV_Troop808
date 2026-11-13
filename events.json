@@ -955,7 +955,7 @@
     "title": "Paddle Boarding Award",
     "source": "tropa",
     "start": "2026-11-21T08:00:00",
-    "end": "2026-11-22T14:00:00",
+    "end": "2026-11-21T12:00:00",
     "allDay": false,
     "y": 2026,
     "m": 10,
@@ -964,8 +964,8 @@
     "backgroundColor": "#4c1d95",
     "borderColor": "transparent",
     "extendedProps": {
-      "location": "",
-      "description": "Actividad Acuática"
+      "location": "San Juan Bay Marina\\, 482 Av. Manuel Fernández Juncos Pda 10.5\\, San Juan\\, 00907\\, Puerto Rico",
+      "description": "Meta: Requisitos y Adiestramientos para lograr el Stand Up Paddleboarding Award"
     }
   },
   {
