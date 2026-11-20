@@ -884,23 +884,6 @@
     }
   },
   {
-    "title": "Reunión Regular - Clase B/Anaranjado / Junta de Repaso / Reunión de Padres",
-    "source": "tropa",
-    "start": "2026-11-14T09:00:00",
-    "end": "2026-11-14T12:00:00",
-    "allDay": false,
-    "y": 2026,
-    "m": 10,
-    "d": 14,
-    "comp": 1794646800000,
-    "backgroundColor": "#ea580c",
-    "borderColor": "transparent",
-    "extendedProps": {
-      "location": "CANEY Tropa 808\\, Bayamón",
-      "description": ""
-    }
-  },
-  {
     "title": "Reunión Regular del Crew",
     "source": "tropa",
     "start": "2026-11-14T09:00:00",
@@ -914,6 +897,23 @@
     "borderColor": "transparent",
     "extendedProps": {
       "location": "El Caney de la Tropa 808\\, 9VX4+5H\\, Bayamón\\, 00961\\, Puerto Rico",
+      "description": ""
+    }
+  },
+  {
+    "title": "Reunión Regular - Clase B/Anaranjado / Junta de Repaso / Reunión de Padres",
+    "source": "tropa",
+    "start": "2026-11-14T09:00:00",
+    "end": "2026-11-14T12:00:00",
+    "allDay": false,
+    "y": 2026,
+    "m": 10,
+    "d": 14,
+    "comp": 1794646800000,
+    "backgroundColor": "#ea580c",
+    "borderColor": "transparent",
+    "extendedProps": {
+      "location": "CANEY Tropa 808\\, Bayamón",
       "description": ""
     }
   },
@@ -1034,23 +1034,6 @@
     "extendedProps": {
       "location": "",
       "description": "<p>Referencia de fecha y horario: fuente consultada el 20 de octubre de 2026. Horas de Puerto Rico.<br>Horario según la ficha general del calendario conciliar. Pendiente de confirmación con la coordinación.<br>Fuente: https://scoutingevent.com/?OrgKey=BSA661&amp;calendarID=620158</p>"
-    }
-  },
-  {
-    "title": "Ceremonia Anual de Premios y Encuentro Navideño",
-    "source": "distrito",
-    "start": "2026-12-10T18:30:00",
-    "end": "2026-12-10T21:30:00",
-    "allDay": false,
-    "y": 2026,
-    "m": 11,
-    "d": 10,
-    "comp": 1796927400000,
-    "backgroundColor": "#2563eb",
-    "borderColor": "transparent",
-    "extendedProps": {
-      "location": "El Caney de la Tropa 808\\, 9VX4+5H\\, Bayamón\\, 00961\\, Puerto Rico",
-      "description": "https://www.facebook.com/share/p/1DhTddGUya/?mibextid=wwXIfr"
     }
   },
   {
